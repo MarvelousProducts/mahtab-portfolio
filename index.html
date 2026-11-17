@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mahtab Khan — Marvelous Products | Websites, Ads & AI Assistants</title>
+<meta name="description" content="We manage the leads of a business. We create websites (WordPress & HTML/CSS) and set up AI assistants. Work first — get results, then pay.">
+<style>
+:root{
+  --bg:#07070b; --bg2:#0d0d14; --card:#12121c; --card2:#171724;
+  --line:#23232f; --txt:#f4f4f6; --mut:#a7a7b3; --red:#e0282c; --red2:#ff4b4f;
+}
+body.light{--bg:#f4f4f7;--bg2:#ffffff;--card:#ffffff;--card2:#f0f0f4;--line:#e2e2ea;--txt:#131318;--mut:#5c5c68}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:'Segoe UI',system-ui,Arial,sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+section{padding:92px 0}
+.kicker{color:var(--red2);font-weight:700;letter-spacing:3px;font-size:13px;text-transform:uppercase;text-align:center}
+h2.title{font-size:40px;text-align:center;margin:10px 0 8px;font-weight:800}
+.sub{color:var(--mut);text-align:center;max-width:640px;margin:0 auto 52px;font-size:16px;line-height:1.6}
+.reveal{opacity:0;transform:translateY(26px);transition:all .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+/* NAV */
+nav{position:fixed;inset:0 0 auto 0;z-index:60;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-size:21px;font-weight:800;letter-spacing:.4px}
+.logo span{color:var(--red2)}
+.logo small{display:block;font-size:10px;letter-spacing:3px;color:var(--mut);font-weight:600}
+.links{display:flex;gap:26px;font-size:14.5px;color:var(--mut)}
+.links a:hover{color:var(--txt)}
+.nav-btns{display:flex;gap:10px;align-items:center}
+.tgl{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--txt);cursor:pointer;font-size:17px}
+.hire{background:var(--red);color:#fff;padding:10px 20px;border-radius:9px;font-weight:700;font-size:14px}
+.burger{display:none;background:none;border:0;color:var(--txt);font-size:26px;cursor:pointer}
+@media(max-width:900px){.links{display:none;position:absolute;top:68px;left:0;right:0;background:var(--bg2);flex-direction:column;padding:18px 22px;gap:16px;border-bottom:1px solid var(--line)}.links.open{display:flex}.burger{display:block}}
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;padding:130px 0 70px;background:radial-gradient(900px 480px at 85% 8%,rgba(224,40,44,.16),transparent 60%),radial-gradient(700px 500px at 8% 90%,rgba(224,40,44,.08),transparent 60%),var(--bg)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}}
+.hello{color:var(--mut);font-size:19px}
+.hero h1{font-size:64px;line-height:1.04;font-weight:900;margin:8px 0 4px}
+.hero h1 .red{color:var(--red2)}
+.role{font-size:27px;font-weight:700;color:var(--red2);min-height:38px}
+.role .cur{display:inline-block;width:3px;height:26px;background:var(--red2);vertical-align:-3px;margin-left:3px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.tag{color:var(--mut);font-size:17px;line-height:1.65;margin:16px 0 26px;max-width:520px}
+.tag b{color:var(--txt)}
+.btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn{padding:14px 28px;border-radius:10px;font-weight:700;font-size:15px;display:inline-block}
+.btn-red{background:var(--red);color:#fff;box-shadow:0 10px 30px rgba(224,40,44,.35)}
+.btn-ghost{border:1px solid var(--line);background:var(--card)}
+.stats{display:flex;gap:0;margin-top:44px;border:1px solid var(--line);border-radius:14px;background:var(--card);overflow:hidden;max-width:560px}
+.stat{flex:1;padding:16px 10px;text-align:center}
+.stat+.stat{border-left:1px solid var(--line)}
+.stat b{font-size:23px;display:block}
+.stat span{font-size:12px;color:var(--mut);letter-spacing:.4px}
+.hero-photo{position:relative;justify-self:center;width:min(430px,88vw);animation:walkIn 2.4s cubic-bezier(.2,.7,.2,1) both}
+@keyframes walkIn{0%{opacity:0;transform:translateX(110px) scale(.8)}45%{opacity:1;transform:translateX(-6px) scale(1.02) translateY(-9px)}65%{transform:translateX(4px) scale(1) translateY(3px)}82%{transform:translateX(-2px) translateY(-3px)}100%{opacity:1;transform:none}}
+.hero-photo .frame{border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:0 34px 80px rgba(0,0,0,.55)}
+.hero-photo .frame img{animation:walkin 9s ease-in-out infinite alternate}
+@keyframes walkin{from{transform:scale(1) translateY(0)}to{transform:scale(1.16) translateY(-8px)}}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.hero-photo:before{content:"";position:absolute;inset:-16px auto auto -16px;width:110px;height:110px;border-top:4px solid var(--red);border-left:4px solid var(--red);border-radius:22px 0 0 0}
+.badge{position:absolute;background:var(--card2);border:1px solid var(--line);border-radius:12px;padding:10px 14px;font-size:13px;font-weight:700;box-shadow:0 14px 34px rgba(0,0,0,.4);animation:floaty 6s ease-in-out infinite}
+.badge i{color:var(--red2);font-style:normal}
+.b1{top:34px;left:-58px}.b2{bottom:110px;right:-46px;animation-delay:1.2s}.b3{bottom:-20px;left:26px;animation-delay:2s}
+@media(max-width:1100px){.b1{left:-8px}.b2{right:-6px}}
+/* MARQUEE */
+.marquee{border-block:1px solid var(--line);background:var(--bg2);overflow:hidden;padding:15px 0}
+.mq-track{display:flex;gap:44px;white-space:nowrap;width:max-content;animation:mq 26s linear infinite;font-weight:800;letter-spacing:2px;font-size:14px;color:var(--mut)}
+.mq-track b{color:var(--red2)}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:52px;align-items:center}
+@media(max-width:900px){.about-grid{grid-template-columns:1fr}}
+.about-photo{border-radius:20px;overflow:hidden;border:1px solid var(--line)}
+.about-txt h3{font-size:29px;margin-bottom:14px}
+.about-txt p{color:var(--mut);line-height:1.75;margin-bottom:14px}
+.info{display:grid;grid-template-columns:1fr 1fr;gap:10px 22px;margin:20px 0 26px;font-size:15px}
+.info b{color:var(--mut);font-weight:600;margin-right:8px}
+@media(max-width:560px){.info{grid-template-columns:1fr}}
+/* CARDS */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+@media(max-width:900px){.grid3,.grid2{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px 26px;transition:.35s}
+.card:hover{transform:translateY(-6px);border-color:var(--red);box-shadow:0 22px 44px rgba(0,0,0,.35)}
+.card .ic{width:56px;height:56px;border-radius:14px;background:rgba(224,40,44,.13);display:flex;align-items:center;justify-content:center;font-size:27px;margin-bottom:18px}
+.card h3{font-size:20px;margin-bottom:10px}
+.card p{color:var(--mut);line-height:1.65;font-size:15px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:860px;margin:0 auto}
+.chip{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:10px 20px;font-weight:700;font-size:14px}
+.chip.hot{border-color:var(--red);color:var(--red2)}
+/* PROJECTS */
+.proj{border-radius:18px;overflow:hidden;border:1px solid var(--line);background:var(--card);transition:.35s}
+.proj:hover{transform:translateY(-6px);box-shadow:0 24px 48px rgba(0,0,0,.4)}
+.proj .im{height:215px;overflow:hidden}
+.proj .im img{width:100%;height:100%;object-fit:cover;transition:.6s}
+.proj:hover .im img{transform:scale(1.07)}
+.proj .bd{padding:22px 24px}
+.proj h3{font-size:19px;margin-bottom:8px}
+.proj p{color:var(--mut);font-size:14.5px;line-height:1.6;margin-bottom:14px}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.tags span{font-size:11.5px;border:1px solid var(--line);border-radius:999px;padding:4px 11px;color:var(--mut)}
+.proj a.go{color:var(--red2);font-weight:700;font-size:14.5px}
+/* TIMELINE */
+.tl{max-width:760px;margin:0 auto;position:relative;padding-left:30px}
+.tl:before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.tl-it{position:relative;padding-bottom:38px}
+.tl-it:before{content:"";position:absolute;left:-29px;top:5px;width:14px;height:14px;border-radius:50%;background:var(--red);box-shadow:0 0 0 5px rgba(224,40,44,.18)}
+.tl-it .when{color:var(--red2);font-weight:800;font-size:13.5px;letter-spacing:1px}
+.tl-it h3{font-size:20px;margin:5px 0 7px}
+.tl-it p{color:var(--mut);line-height:1.65;font-size:15px}
+/* PROCESS */
+.process{background:var(--bg2);border-block:1px solid var(--line)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+@media(max-width:900px){.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.steps{grid-template-columns:1fr}}
+.step{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 22px;text-align:center}
+.step .n{width:48px;height:48px;margin:0 auto 14px;border-radius:50%;background:var(--red);color:#fff;font-weight:900;font-size:20px;display:flex;align-items:center;justify-content:center}
+.step h3{font-size:17px;margin-bottom:8px}
+.step p{color:var(--mut);font-size:14px;line-height:1.6}
+.bigline{text-align:center;font-size:clamp(26px,4.6vw,44px);font-weight:900;letter-spacing:1px;margin-top:56px}
+.bigline span{color:var(--red2)}
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:26px;max-width:920px;margin:0 auto}
+@media(max-width:900px){.contact-grid{grid-template-columns:1fr}}
+.cinfo{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px 26px}
+.cinfo h3{font-size:21px;margin-bottom:18px}
+.crow{display:flex;gap:14px;align-items:center;padding:13px 0;border-bottom:1px solid var(--line);font-size:15px}
+.crow:last-child{border:0}
+.crow .ci{width:42px;height:42px;border-radius:11px;background:rgba(224,40,44,.13);display:flex;align-items:center;justify-content:center;font-size:19px;flex:none}
+.crow small{display:block;color:var(--mut);font-size:12.5px}
+form.cform{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px 26px;display:flex;flex-direction:column;gap:14px}
+.cform input,.cform textarea{background:var(--bg2);border:1px solid var(--line);border-radius:11px;padding:14px 16px;color:var(--txt);font-size:15px;font-family:inherit;width:100%}
+.cform textarea{min-height:120px;resize:vertical}
+.cform button{background:var(--red);color:#fff;border:0;border-radius:11px;padding:15px;font-weight:800;font-size:15.5px;cursor:pointer}
+footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:var(--mut);font-size:14px}
+.wa{position:fixed;right:20px;bottom:20px;z-index:70;width:58px;height:58px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;font-size:29px;box-shadow:0 14px 34px rgba(0,0,0,.45)}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-in">
+    <a class="logo" href="#top">MARVELOUS <span>PRODUCTS</span><small>MAHTAB KHAN</small></a>
+    <div class="links" id="links">
+      <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a>
+      <a href="#experience">Experience</a><a href="#services">Services</a><a href="#process">How We Work</a><a href="#contact">Contact</a>
+    </div>
+    <div class="nav-btns">
+      <button class="tgl" id="tgl" title="Theme">☀️</button>
+      <a class="hire" href="#contact">Hire Me</a>
+      <button class="burger" id="burger">☰</button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="hello">Hello, I'm</p>
+      <h1>Mahtab <span class="red">Khan</span></h1>
+      <div class="role"><span id="typed"></span><span class="cur"></span></div>
+      <p class="tag">We manage the leads of a business. We create <b>websites</b> and set up an <b>AI assistant</b> that replies to your customers day and night. <b>Work first — get results, then pay.</b></p>
+      <div class="btns">
+        <a class="btn btn-red" href="#projects">View Projects</a>
+        <a class="btn btn-ghost" href="#contact">Contact Me</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>3+</b><span>Years Experience</span></div>
+        <div class="stat"><b>10+</b><span>Projects &amp; Demos</span></div>
+        <div class="stat"><b>100%</b><span>Remote, Worldwide</span></div>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <div class="frame"><img src="hero-suit.jpg" alt="Mahtab Khan"></div>
+      <div class="badge b1"><i>◆</i> WordPress &amp; HTML/CSS</div>
+      <div class="badge b2"><i>◆</i> AI Assistant 24/7</div>
+      <div class="badge b3"><i>◆</i> Work First, Pay Later</div>
+    </div>
+  </div>
+</header>
+
+<div class="marquee"><div class="mq-track" id="mq"></div></div>
+
+<section id="about">
+  <div class="wrap">
+    <p class="kicker">About Me</p>
+    <h2 class="title">Turning Visitors Into Customers</h2>
+    <p class="sub">A website is not a poster. It should answer customers, take bookings and bring you sales — even while you sleep.</p>
+    <div class="about-grid">
+      <div class="about-photo reveal"><img src="about.jpg" alt="Mahtab Khan"></div>
+      <div class="about-txt reveal">
+        <h3>Founder of Marvelous Products</h3>
+        <p>I build websites for businesses in the UK, USA, Australia and beyond — with <b>WordPress</b>, and with clean <b>HTML &amp; CSS</b> — and I set up an <b>AI assistant</b> on the website that replies to your customers instantly, day and night.</p>
+        <p>Before this, I worked in sales and customer support on US campaigns, so I know exactly how customers ask, hesitate and buy. I build every website around that: clear offers, fast replies, easy contact.</p>
+        <p>My rule is simple: <b style="color:var(--red2)">we do the work first, you see the results, then you pay.</b> No risk for you.</p>
+        <div class="info">
+          <div><b>Name</b> Mahtab Khan</div>
+          <div><b>Agency</b> Marvelous Products</div>
+          <div><b>Based in</b> Karachi — working worldwide</div>
+          <div><b>Email</b> wj044103@gmail.com</div>
+          <div><b>WhatsApp</b> +92 371 2029204</div>
+          <div><b>Status</b> Open to work</div>
+        </div>
+        <a class="btn btn-red" href="#contact">Start a Project</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" style="background:var(--bg2);border-block:1px solid var(--line)">
+  <div class="wrap">
+    <p class="kicker">What I Do</p>
+    <h2 class="title">Skills &amp; Services</h2>
+    <p class="sub">Everything a small business needs to get found, get enquiries and get customers — in one place.</p>
+    <div class="grid3">
+      <div class="card reveal"><div class="ic">🌐</div><h3>Website Development</h3><p>Fast, professional business websites built with <b>WordPress</b> or hand-coded <b>HTML &amp; CSS</b> — mobile-friendly, easy to update, made to bring enquiries, not just look nice.</p></div>
+      <div class="card reveal"><div class="ic">🤖</div><h3>AI Assistant &amp; Chatbot</h3><p>An AI assistant on your website that answers customer questions instantly, 24/7, takes bookings and captures leads while you are busy working.</p></div>
+      <div class="card reveal"><div class="ic">📣</div><h3>Ads That Bring Customers</h3><p>Facebook, Instagram, Google, TikTok and YouTube ads, targeted at people ready to buy — managed, tested and improved every week.</p></div>
+      <div class="card reveal"><div class="ic">📱</div><h3>Social Media Management</h3><p>Content, posts and pages that make your business look active and trusted — so customers choose you over the shop that posts nothing.</p></div>
+      <div class="card reveal"><div class="ic">🎨</div><h3>Logo &amp; Brand Design</h3><p>Clean logos and brand designs that make a small business look established and professional everywhere — shop, page and website.</p></div>
+      <div class="card reveal"><div class="ic">📍</div><h3>Google Business Profile</h3><p>A complete, optimised Google profile with photos, services and reviews — so nearby customers find you first when they search.</p></div>
+    </div>
+    <h3 style="text-align:center;margin:56px 0 20px;font-size:21px">Tools &amp; Platforms I Work With</h3>
+    <div class="chips reveal">
+      <span class="chip hot">WordPress</span><span class="chip hot">HTML5</span><span class="chip hot">CSS3</span>
+      <span class="chip">WooCommerce</span><span class="chip">Meta Ads</span><span class="chip">Google Ads</span>
+      <span class="chip">TikTok Ads</span><span class="chip">ChatGPT Ads</span><span class="chip">Google Business</span><span class="chip">Canva</span>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <p class="kicker">My Work</p>
+    <h2 class="title">Featured Projects</h2>
+    <p class="sub">Real working demos — open them and try them like a customer would.</p>
+    <div class="grid2">
+      <div class="proj reveal"><div class="im"><img src="proj-estate.jpg" alt="Marvelous Estate"></div><div class="bd">
+        <h3>Marvelous Estate — Real Estate Website</h3>
+        <p>A premium property website with listings, search and enquiry forms — built to turn visitors into viewing bookings.</p>
+        <div class="tags"><span>HTML/CSS</span><span>Real Estate</span><span>Live Demo</span></div>
+        <a class="go" href="https://marvelous-estate-demo.netlify.app/estate/" target="_blank" rel="noopener">View Live →</a></div></div>
+      <div class="proj reveal"><div class="im"><img src="proj-qr.jpg" alt="Restaurant QR Ordering"></div><div class="bd">
+        <h3>Restaurant QR Ordering System</h3>
+        <p>Customers scan a QR on the table, order from their phone, and the order goes straight to the kitchen — with an owner admin panel for the menu.</p>
+        <div class="tags"><span>Web App</span><span>Restaurants</span><span>Live Demo</span></div>
+        <a class="go" href="https://mp-qr-ordering.pages.dev" target="_blank" rel="noopener">View Live →</a></div></div>
+      <div class="proj reveal"><div class="im"><img src="proj-bookflow.jpg" alt="BookFlow"></div><div class="bd">
+        <h3>BookFlow — Booking System</h3>
+        <p>An online booking system for service businesses: customers pick a time, get confirmed instantly, and the owner sees everything in one dashboard.</p>
+        <div class="tags"><span>Booking</span><span>Dashboard</span><span>Demo</span></div>
+        <a class="go" href="https://marvelous-demos.netlify.app/doner/" target="_blank" rel="noopener">View Live →</a></div></div>
+      <div class="proj reveal"><div class="im"><img src="proj-agency.jpg" alt="Marvelous Products Agency"></div><div class="bd">
+        <h3>Marvelous Products — Agency Website</h3>
+        <p>Our own agency website: services, demos and contact — the same standard of work we deliver for clients.</p>
+        <div class="tags"><span>Agency</span><span>WordPress-style</span><span>Live</span></div>
+        <a class="go" href="https://marvelous-products.netlify.app/" target="_blank" rel="noopener">View Live →</a></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" style="background:var(--bg2);border-block:1px solid var(--line)">
+  <div class="wrap">
+    <p class="kicker">My Journey</p>
+    <h2 class="title">Experience</h2>
+    <p class="sub">A mix of real customer experience and hands-on building — that is why my websites are made to sell, not just to show.</p>
+    <div class="tl">
+      <div class="tl-it reveal"><div class="when">2024 — PRESENT</div><h3>Founder &amp; Web Developer — Marvelous Products</h3><p>Running my own agency: websites (WordPress &amp; HTML/CSS), AI assistants, ads and social media for businesses in the UK, USA, Australia and Pakistan. Work-first model — clients see results before they pay.</p></div>
+      <div class="tl-it reveal"><div class="when">2023</div><h3>Sales &amp; Customer Support — ibex (US Campaigns)</h3><p>Worked on US campaigns including ACA health insurance, Medicare Supplement, Final Expense and Auto Insurance — sales and customer support, speaking with American customers every day.</p></div>
+      <div class="tl-it reveal"><div class="when">2022 — 2023</div><h3>Learning &amp; Building</h3><p>Learned web development, design and AI tools by building real projects — booking systems, ordering systems and business websites — the same demos you can open above.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <p class="kicker">Services</p>
+    <h2 class="title">What You Can Hire Me For</h2>
+    <p class="sub">Pick one, or take the full system: website + AI assistant + ads, working together.</p>
+    <div class="grid3">
+      <div class="card reveal"><div class="ic">💻</div><h3>Business Website</h3><p>A complete website for your business — built with WordPress or HTML/CSS, with your services, photos, contact and booking. First sample page free.</p></div>
+      <div class="card reveal"><div class="ic">🤖</div><h3>AI Assistant Setup</h3><p>We set up an AI assistant on your website that replies to customers instantly, answers questions and books appointments — 24/7, even at 2 AM.</p></div>
+      <div class="card reveal"><div class="ic">🚀</div><h3>Ads &amp; Social Media</h3><p>We run your Facebook, Instagram, Google and TikTok ads and manage your pages — bringing you leads while you run your business.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="process" class="process">
+  <div class="wrap">
+    <p class="kicker">How We Work</p>
+    <h2 class="title">No Risk For You</h2>
+    <p class="sub">Most agencies ask for money first and promise later. We do the opposite.</p>
+    <div class="steps">
+      <div class="step reveal"><div class="n">1</div><h3>Tell Us Your Business</h3><p>Message us what you sell and what you need — a website, ads, an AI assistant, or all of it.</p></div>
+      <div class="step reveal"><div class="n">2</div><h3>We Build First</h3><p>We make your sample first — a real page, a real demo — so you can see our work with your own eyes.</p></div>
+      <div class="step reveal"><div class="n">3</div><h3>You See Results</h3><p>You check everything. Ask for changes. Only move forward when you are happy with what you see.</p></div>
+      <div class="step reveal"><div class="n">4</div><h3>Then You Pay</h3><p>Payment comes after the work — simple, safe and fair. That is how we earn trust.</p></div>
+    </div>
+    <p class="bigline reveal">WORK FIRST. <span>GET RESULTS.</span> THEN PAY.</p>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <p class="kicker">Contact</p>
+    <h2 class="title">Let's Build Yours</h2>
+    <p class="sub">Tell me about your business — I reply fast, and your first sample is free.</p>
+    <div class="contact-grid">
+      <div class="cinfo reveal">
+        <h3>Contact Information</h3>
+        <div class="crow"><div class="ci">✉️</div><div><small>Email</small>wj044103@gmail.com</div></div>
+        <div class="crow"><div class="ci">💬</div><div><small>WhatsApp</small>+92 371 2029204</div></div>
+        <div class="crow"><div class="ci">📍</div><div><small>Location</small>Karachi, Pakistan — working worldwide</div></div>
+        <div class="crow"><div class="ci">🕒</div><div><small>Availability</small>Open to new projects</div></div>
+      </div>
+      <form class="cform reveal" id="cform">
+        <input id="fn" type="text" placeholder="Your Name" required>
+        <input id="fe" type="email" placeholder="Your Email" required>
+        <input id="fs" type="text" placeholder="What does your business sell?">
+        <textarea id="fm" placeholder="Tell me what you need — a website, ads, an AI assistant..." required></textarea>
+        <button type="submit">Send Message on WhatsApp →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© 2026 Marvelous Products — Mahtab Khan. Websites (WordPress &amp; HTML/CSS) • AI Assistants • Ads. Work first, get results, then pay.</div>
+</footer>
+
+<a class="wa" href="https://wa.me/923712029204?text=Hi%2C%20I%20need%20a%20website%20for%20my%20business" target="_blank" rel="noopener" title="WhatsApp">💬</a>
+
+<script>
+// typing roles
+const roles=["Website Developer","WordPress Developer","HTML & CSS Developer","AI Assistant Builder","Ads & Social Media Marketer"];
+const el=document.getElementById('typed');let ri=0,ci=0,del=false;
+(function tick(){const w=roles[ri];el.textContent=w.slice(0,ci);
+ if(!del){ci++;if(ci>w.length){del=true;return setTimeout(tick,1500)}}
+ else{ci--;if(ci===0){del=false;ri=(ri+1)%roles.length}}
+ setTimeout(tick,del?38:78)})();
+// marquee
+const items=["WEBSITES","WORDPRESS","HTML & CSS","AI ASSISTANT","FACEBOOK ADS","GOOGLE ADS","TIKTOK ADS","SOCIAL MEDIA","LOGO DESIGN","GOOGLE BUSINESS PROFILE"];
+const half=items.map(i=>`<span>${i}</span><b>✦</b>`).join("");
+document.getElementById('mq').innerHTML=half+half;
+// reveal on scroll
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(n=>io.observe(n));
+// theme toggle
+const tgl=document.getElementById('tgl');
+tgl.onclick=()=>{document.body.classList.toggle('light');tgl.textContent=document.body.classList.contains('light')?'🌙':'☀️'};
+// mobile menu
+const links=document.getElementById('links');
+document.getElementById('burger').onclick=()=>links.classList.toggle('open');
+links.querySelectorAll('a').forEach(a=>a.onclick=()=>links.classList.remove('open'));
+// contact form -> WhatsApp
+document.getElementById('cform').addEventListener('submit',e=>{e.preventDefault();
+ const t=`Hi, I'm ${fn.value}. ${fs.value?('My business: '+fs.value+'. '):''}${fm.value} (email: ${fe.value})`;
+ window.open('https://wa.me/923712029204?text='+encodeURIComponent(t),'_blank');});
+</script>
+</body>
+</html>
